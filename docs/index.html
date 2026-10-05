@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Barbie Faves</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header class="top">
+            <h1>Favorite Foods Catalogue</h1>
+        </header>
+
+        <div class="body-wrap">
+            <nav class="sidebar">
+                <a href="#" class="fave-food">FAVORITE FOOD</a>
+            <!-- since these aren't discussed in the exercise, clicking on them won't do anything -->
+                <a href="#">FAVORITE SONGS</a>
+                <a href="#">FAVORITE QUOTES</a>
+            </nav>
+
+            <main class="content">
+                <!-- class values are for when the song and quotes tab are required -->
+                <form id="food-form" class="form-wrap" novalidate>
+                    <input type="text"   id="food-name"     name="foodName"    placeholder="Food name">
+                    <input type="text"   id="food-desc"     name="foodDesc"    placeholder="Description">
+                    <input type="text"   id="food-pic-url"  name="foodURL"     placeholder="Image URL">
+                    <input type="number" id="food-rank"     name="foodRank"    placeholder="Rank" min="1">
+                    <button type="button" id="submit-btn">Submit</button>
+                </form>
+
+                <section id="food-entries" class="form-entries"></section>
+            </main>
+
+            <!-- random barbie scenes from Barbie: Life in the Dreamhouse -->
+            <aside class="ads">
+                <h2>ADS</h2>
+                <div class="ad"><img src="https://i.ytimg.com/vi/UUsutu_AZBA/maxresdefault.jpg" alt="Ad"></div>
+                <div class="ad"><img src="https://i.ytimg.com/vi/V6BGsavm26A/maxresdefault.jpg" alt="Ad"></div>
+                <div class="ad"><img src="https://i.ytimg.com/vi/mXBh6CLEUgg/maxresdefault.jpg" alt="Ad"></div>
+            </aside>
+        </div>
+
+        <!-- at the end so it doesn't try to access the forms before they've been read -->
+        <script src="form.js"></script>
+    </body>
+    
+</html>
