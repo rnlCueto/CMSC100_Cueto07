@@ -1,3 +1,4 @@
+
 /* Page */
 * { box-sizing: border-box; }
 body {
@@ -21,7 +22,8 @@ body {
 .body-wrap  { 
     display: flex; 
     gap: 20px; 
-    padding: 20px; }
+    padding: 20px; 
+}
 .content { flex: 1; }
 
 /* White rounded boxes with purple dashed border */
@@ -36,6 +38,7 @@ body {
     width: 180px; 
     align-self: flex-start; 
     padding: 8px; }
+/* nav texts */
 .sidebar a {
     display: block;
     padding: 12px;
@@ -44,22 +47,24 @@ body {
     color: #5a1a3a;
     border-radius: 10px;
 }
+/* active nav text */
 .sidebar a.fave-food { 
     background: #e0218a; 
     color: #fff; }
 
 /* Form */
-
 .form-wrap { 
     display: flex; 
     flex-direction: column;      /* stack everything top to bottom */
     gap: 8px; 
     padding: 14px; }
+/* input field */
 .form-wrap input { 
     width: 100%;                 /* each input fills the whole width */
     padding: 8px; 
     border: 2px solid #ffc2e0; 
     border-radius: 10px; }
+/* submit btn */
 .form-wrap button {
     align-self: center;          /* centers the button, but it keeps its own size */
     margin-top: 8px;             /* extra space so it isn't stuck to the inputs */
@@ -71,7 +76,7 @@ body {
     cursor: pointer;
 }
 
-/* The SECTION: puts the cards side by side */
+/* section puts the entries side by side */
 .form-entries { 
     display: flex; 
     flex-wrap: wrap; 
@@ -79,7 +84,8 @@ body {
     justify-content: center;
     margin-top: 8px; 
 }
-/* Each CARD */
+
+/* Each card/entry */
 .form-entry {
     width: 150px;
     padding: 12px;
@@ -88,18 +94,33 @@ body {
     border: 3px solid #ff69b4;
     border-radius: 14px;
 }
+/* Rank number on each card */
+.form-entry h4 {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: #e0218a;
+    color: #fff;
+    font-size: 12px;
+}
+/* food image url */
 .form-entry img { 
+    display: block; /* image always starts on its own line, so the rank stays above it */
     width: 100%; 
     height: 84px; 
     object-fit: cover; 
     border-radius: 8px; }
-.form-entry h3  { 
+/* food name */
+.form-entry h3  {  
     margin: 10px 0 6px; 
     font-size: 14px; 
     color: #e0218a; }
+/* food desc */
 .form-entry p   { 
     margin: 0 0 10px; 
     font-size: 11px; }
+/* delete btn */
 .form-entry button {
     padding: 4px 12px;
     border: none;
@@ -115,19 +136,22 @@ body {
     align-self: flex-start; 
     padding: 16px; 
     text-align: center; }
+/* ads label */
 .ads h2 {
     margin-top: 0; 
     color: #b57edc; }
+/* ad containers */
 .ad {
     height: 120px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: auto;
     background: #e6d6ff;          /* placeholder color */
     border-radius: 12px;
 }
+/* ad images */
 .ad img { 
     width: 100%; 
     height: 100%; 
